@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ingrid Soares - Estética e Cílios | Jardim Meriti, São João de Meriti</title>
+<meta name="description" content="Extensão de cílios e estética em Jardim Meriti, São João de Meriti - RJ. Avaliação 5.0 no Google. Agende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================
+   1. VARIÁVEIS — troque aqui para revender para outro cliente
+   ===================================================== */
+:root{
+  --bg:#F7F2EC;          /* areia clara */
+  --surface:#FFFCF8;     /* cartões */
+  --sand:#EADFD2;        /* detalhes / bordas */
+  --ink:#3A2A27;         /* texto principal */
+  --muted:#7A6862;       /* texto secundário */
+  --rose:#A9625B;        /* rosé queimado (ação) */
+  --rose-dark:#8C4B45;
+  --gold:#B8956A;        /* dourado suave */
+  --wa:#25D366;          /* verde WhatsApp */
+  --font-title:'Gilda Display',Georgia,serif;
+  --font-body:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --radius:22px;
+  --maxw:1120px;
+}
+
+/* =====================================================
+   2. BASE
+   ===================================================== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg,iframe{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--font-title);font-weight:400;line-height:1.15;margin:0 0 .5em;letter-spacing:.005em}
+p{margin:0 0 1em}
+.wrap{width:min(100% - 2.5rem,var(--maxw));margin-inline:auto}
+section{padding-block:clamp(3.5rem,8vw,6rem)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.5rem;border-radius:999px;border:1.5px solid transparent;font:500 1rem var(--font-body);text-decoration:none;cursor:pointer;transition:background .25s,transform .25s,border-color .25s}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--rose);color:#fff}
+.btn-primary:hover{background:var(--rose-dark)}
+.btn-wa{background:var(--wa);color:#0d2b17}
+.btn-wa:hover{filter:brightness(.95)}
+.btn-ghost{border-color:var(--gold);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--sand)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* =====================================================
+   3. CABEÇALHO DA SEÇÃO (hero)
+   ===================================================== */
+.hero{padding-top:clamp(3rem,7vw,5.5rem);position:relative;overflow:hidden}
+.hero-grid{display:grid;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6.2vw,4.4rem);max-width:14ch}
+.hero .lead{font-size:1.15rem;color:var(--muted);max-width:46ch}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.6rem 0 2rem;padding:0;list-style:none}
+.badges li{display:flex;align-items:center;gap:.5rem;padding:.5rem .95rem;border:1px solid var(--sand);background:var(--surface);border-radius:999px;font-size:.92rem}
+.badges .star{color:var(--gold)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* Elemento marcante: o arco de cílios desenhado em SVG */
+.lash-art{justify-self:center;width:min(100%,430px)}
+.lash-art .lash{stroke:var(--rose);stroke-width:2.2;stroke-linecap:round;fill:none;stroke-dasharray:140;stroke-dashoffset:140;animation:draw 1.6s ease-out forwards}
+.lash-art .lash:nth-child(3n){stroke:var(--gold)}
+@keyframes draw{to{stroke-dashoffset:0}}
+.lash-art .lid{stroke:var(--ink);stroke-width:2.4;fill:none;stroke-linecap:round}
+
+/* =====================================================
+   4. SERVIÇOS
+   ===================================================== */
+.section-head{max-width:60ch;margin-bottom:2rem}
+.section-head h2{font-size:clamp(1.9rem,4.4vw,2.9rem)}
+.section-head p{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
+.chip{padding:.5rem 1.1rem;border-radius:999px;border:1px solid var(--sand);background:transparent;font:500 .95rem var(--font-body);color:var(--ink);cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--gold)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{background:var(--surface);border:1px solid var(--sand);border-radius:var(--radius);padding:1.6rem;display:flex;flex-direction:column}
+.card .tag{align-self:flex-start;font-size:.85rem;color:var(--rose-dark);background:#F3E4DF;padding:.2rem .7rem;border-radius:999px;margin-bottom:1rem}
+.card h3{font-size:1.4rem}
+.card p{color:var(--muted);flex:1}
+.card .btn{width:100%;padding:.75rem 1rem}
+.card[hidden]{display:none}
+.note{margin-top:1.5rem;font-size:.9rem;color:var(--muted)}
+
+/* Montar mensagem personalizada */
+.composer{margin-top:3rem;background:var(--ink);color:var(--bg);border-radius:var(--radius);padding:clamp(1.6rem,4vw,2.6rem);display:grid;gap:1.5rem}
+.composer h3{font-size:clamp(1.5rem,3.4vw,2rem);margin:0}
+.composer p{margin:0;color:#D9CCC3}
+.fields{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.fields label{display:grid;gap:.35rem;font-size:.9rem;color:#D9CCC3}
+.fields input,.fields select{width:100%;padding:.8rem 1rem;border-radius:12px;border:1px solid #5b4a45;background:#4a3834;color:#fff;font:inherit}
+.fields input::placeholder{color:#b9a9a1}
+
+/* =====================================================
+   5. LOCALIZAÇÃO E CONTATO
+   ===================================================== */
+.loc-grid{display:grid;gap:1.25rem}
+.info{background:var(--surface);border:1px solid var(--sand);border-radius:var(--radius);padding:clamp(1.5rem,4vw,2.2rem)}
+.info h2{font-size:clamp(1.8rem,4vw,2.5rem)}
+.info dl{margin:1.4rem 0 1.8rem;display:grid;gap:1.1rem}
+.info dt{font-weight:600;font-size:.95rem;color:var(--rose-dark)}
+.info dd{margin:0}
+.info .actions{display:flex;flex-wrap:wrap;gap:.7rem}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--sand);min-height:340px;background:var(--sand)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0}
+
+/* =====================================================
+   6. PROVA SOCIAL / DIFERENCIAIS
+   ===================================================== */
+.proof{background:var(--sand)}
+.proof-grid{display:grid;gap:2rem;align-items:center}
+.score{display:flex;align-items:baseline;gap:.8rem;font-family:var(--font-title)}
+.score strong{font-size:clamp(4rem,12vw,6.5rem);font-weight:400;line-height:1;color:var(--rose-dark)}
+.score .stars{color:var(--gold);font-size:1.6rem;letter-spacing:.1em}
+.proof-note{color:var(--muted);margin-top:.5rem}
+.points{list-style:none;margin:0;padding:0;display:grid;gap:1.2rem}
+.points li{padding-left:1.8rem;position:relative}
+.points li::before{content:"";position:absolute;left:0;top:.62em;width:.8rem;height:.8rem;border-radius:50% 0 50% 50%;background:var(--rose);transform:rotate(-20deg)}
+.points b{display:block;font-weight:600}
+.points span{color:var(--muted)}
+
+/* =====================================================
+   7. CTA FINAL
+   ===================================================== */
+.final{text-align:center}
+.final .box{background:var(--surface);border:1px solid var(--sand);border-radius:calc(var(--radius) + 8px);padding:clamp(2.2rem,6vw,4rem) 1.5rem}
+.final h2{font-size:clamp(2rem,5vw,3.2rem);max-width:20ch;margin-inline:auto}
+.final p{color:var(--muted);max-width:50ch;margin-inline:auto}
+.final .btn{margin-top:.8rem;font-size:1.1rem;padding:1rem 2rem}
+
+/* Botão flutuante (mobile) */
+.fab{position:fixed;right:1rem;bottom:1rem;z-index:50;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.22)}
+.fab svg{width:30px;height:30px;color:#0d2b17}
+
+/* =====================================================
+   8. RESPONSIVO (mobile-first)
+   ===================================================== */
+@media (min-width:820px){
+  .hero-grid{grid-template-columns:1.1fr .9fr}
+  .loc-grid{grid-template-columns:1fr 1.1fr}
+  .proof-grid{grid-template-columns:.8fr 1.2fr}
+  .composer{grid-template-columns:1fr 1.4fr;align-items:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .lash-art .lash{stroke-dashoffset:0}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== Ícone do WhatsApp reutilizável ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.95L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2Zm5.8 14.1c-.25.7-1.45 1.33-2 1.4-.52.07-1.17.1-1.88-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.9-4.27-5.05-4.47-.15-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.46c.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.52.25.6.85 2.07.92 2.22.08.15.13.32.03.52-.1.2-.15.32-.3.5-.15.17-.31.38-.45.52-.15.15-.3.3-.13.6.18.3.77 1.27 1.65 2.05 1.13 1 2.08 1.31 2.38 1.46.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.75.83 2.05.98.3.15.5.22.57.35.08.12.08.72-.17 1.42Z"/></symbol>
+</svg>
+
+<main>
+
+<!-- ===================================================
+     CABEÇALHO / APRESENTAÇÃO
+     =================================================== -->
+<section class="hero" aria-labelledby="titulo-hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 id="titulo-hero">Um olhar marcante, com cuidado de verdade</h1>
+      <p class="lead">Na Ingrid Soares - Estética e Cílios, cada atendimento é individual: você escolhe o efeito, a Ingrid cuida de cada detalhe. Em Jardim Meriti, São João de Meriti.</p>
+
+      <ul class="badges" aria-label="Destaques do estúdio">
+        <li><span class="star" aria-hidden="true">★</span> Nota 5.0 no Google</li>
+        <li>Espaço liderado por mulher</li>
+        <li>Jardim Meriti, São João de Meriti - RJ</li>
+      </ul>
+
+      <div class="hero-cta">
+        <a class="btn btn-wa" data-wa="Olá, Ingrid! Vim pelo site e quero agendar um horário.">
+          <svg aria-hidden="true"><use href="#i-wa"/></svg> Agendar no WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+
+    <!-- Arte: pálpebra com cílios desenhados (gerada por JS) -->
+    <svg class="lash-art" viewBox="0 0 400 260" role="img" aria-label="Ilustração de um olhar com cílios longos">
+      <path class="lid" d="M30 170 Q200 90 370 170"/>
+      <g id="lashes"></g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===================================================
+     SERVIÇOS (cards gerados por JS a partir da lista abaixo)
+     =================================================== -->
+<section id="servicos" aria-labelledby="titulo-servicos">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="titulo-servicos">Escolha o seu atendimento</h2>
+      <p>Toque em agendar e a conversa já abre no WhatsApp com o serviço escolhido.</p>
+    </div>
+
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por categoria"></div>
+    <div class="grid" id="grid"></div>
+    <p class="note">Valores e tempo de duração são combinados no WhatsApp, de acordo com o que você escolher.</p>
+
+    <!-- Monte sua mensagem -->
+    <div class="composer">
+      <div>
+        <h3>Prefere já enviar seus dados?</h3>
+        <p>Preencha e a mensagem vai pronta para o WhatsApp da Ingrid.</p>
+      </div>
+      <form id="composer" class="fields" novalidate>
+        <label>Seu nome
+          <input id="f-nome" type="text" placeholder="Como posso te chamar?" autocomplete="given-name">
+        </label>
+        <label>Serviço
+          <select id="f-servico"></select>
+        </label>
+        <label>Melhor dia
+          <select id="f-dia">
+            <option>Segunda-feira</option><option>Terça-feira</option><option>Quarta-feira</option>
+            <option>Quinta-feira</option><option>Sexta-feira</option><option>Sábado</option>
+            <option selected>Ainda não sei</option>
+          </select>
+        </label>
+        <button class="btn btn-wa" type="submit" style="align-self:end">
+          <svg aria-hidden="true"><use href="#i-wa"/></svg> Enviar mensagem
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     LOCALIZAÇÃO E CONTATO
+     =================================================== -->
+<section id="local" aria-labelledby="titulo-local" style="padding-top:0">
+  <div class="wrap loc-grid">
+    <div class="info">
+      <h2 id="titulo-local">Onde estamos</h2>
+      <dl>
+        <div><dt>Endereço</dt>
+          <dd><address style="font-style:normal">R. Prado Júnior, 40 - Jardim Meriti<br>São João de Meriti - RJ, 25555-241</address></dd></div>
+        <div><dt>Horário</dt>
+          <!-- PREENCHER: inclua os demais dias quando o cliente informar -->
+          <dd>Segunda-feira a partir das 9h<br><small style="color:var(--muted)">Confirme os demais dias e horários pelo WhatsApp.</small></dd></div>
+        <div><dt>WhatsApp</dt>
+          <dd><a href="https://wa.me/5521964051279" target="_blank" rel="noopener">(21) 96405-1279</a></dd></div>
+      </dl>
+      <div class="actions">
+        <a class="btn btn-primary" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=-22.7782589,-43.3751499">Abrir no Google Maps</a>
+        <a class="btn btn-ghost" data-wa="Olá, Ingrid! Tenho uma dúvida sobre o atendimento.">Tirar dúvidas</a>
+      </div>
+    </div>
+
+    <!-- Mapa incorporado (se o cliente trocar de endereço, altere as coordenadas na URL) -->
+    <div class="map">
+      <iframe title="Mapa do estúdio Ingrid Soares - Estética e Cílios" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=-22.7782589,-43.3751499&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     PROVA SOCIAL / DIFERENCIAIS
+     =================================================== -->
+<section class="proof" aria-labelledby="titulo-prova">
+  <div class="wrap proof-grid">
+    <div>
+      <div class="score"><strong>5.0</strong><span class="stars" aria-label="5 estrelas">★★★★★</span></div>
+      <p class="proof-note">Avaliação no Google Maps</p>
+    </div>
+    <div>
+      <h2 id="titulo-prova" style="font-size:clamp(1.8rem,4vw,2.5rem)">Por que clientes escolhem a Ingrid</h2>
+      <ul class="points">
+        <li><b>Atendimento individual</b><span>Você é atendida com calma, e o resultado é pensado para o seu olhar.</span></li>
+        <li><b>Ambiente acolhedor</b><span>Um espaço liderado por mulher, feito para você relaxar durante o procedimento.</span></li>
+        <li><b>Contato direto</b><span>Tire dúvidas e marque seu horário pelo WhatsApp, sem formulário nem espera.</span></li>
+        <li><b>Perto de você</b><span>Atendimento em Jardim Meriti, em São João de Meriti - RJ.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     CTA FINAL
+     =================================================== -->
+<section class="final" aria-labelledby="titulo-final">
+  <div class="wrap">
+    <div class="box">
+      <h2 id="titulo-final">Garanta o seu horário</h2>
+      <p>Mande uma mensagem para a Ingrid, conte o que você procura e combine o melhor dia.</p>
+      <a class="btn btn-wa" data-wa="Olá, Ingrid! Quero agendar meu horário.">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg> Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Botão flutuante -->
+<a class="fab" data-wa="Olá, Ingrid! Vim pelo site e gostaria de mais informações." aria-label="Chamar no WhatsApp">
+  <svg aria-hidden="true"><use href="#i-wa"/></svg>
+</a>
+
+<script>
+/* =====================================================
+   CONFIGURAÇÃO — edite apenas este bloco para cada cliente
+   ===================================================== */
+const CONFIG = {
+  whatsapp: '5521964051279',
+  /* PREENCHER: serviços reais da Ingrid. Os abaixo são exemplos. */
+  services: [
+    { name:'Extensão de cílios fio a fio', cat:'Cílios', desc:'Efeito natural e leve, com um fio aplicado em cada cílio.' },
+    { name:'Volume brasileiro',            cat:'Cílios', desc:'Olhar mais marcante, com preenchimento e curvatura delicada.' },
+    { name:'Lash lifting',                 cat:'Cílios', desc:'Levanta e curva seus cílios naturais, sem extensão.' },
+    { name:'Design de sobrancelhas',       cat:'Sobrancelhas', desc:'Formato pensado para o seu rosto, com acabamento limpo.' },
+    { name:'Manutenção de cílios',         cat:'Cílios', desc:'Reposição para manter o resultado bonito por mais tempo.' },
+    { name:'Estética facial',              cat:'Estética', desc:'Cuidado com a pele. Consulte os procedimentos disponíveis.' }
+  ]
+};
+
+/* ===== Utilitário: gera o link do WhatsApp com mensagem ===== */
+const waLink = msg => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+
+/* ===== Liga todos os elementos com data-wa ===== */
+function bindWa(root = document){
+  root.querySelectorAll('[data-wa]').forEach(el => {
+    el.href = waLink(el.dataset.wa);
+    el.target = '_blank';
+    el.rel = 'noopener';
+  });
+}
+
+/* ===== Arte dos cílios ===== */
+(function drawLashes(){
+  const g = document.getElementById('lashes');
+  const n = 15; let out = '';
+  for(let i = 0; i < n; i++){
+    const t = i / (n - 1);
+    const x = 50 + t * 300;                       // posição ao longo da pálpebra
+    const y = 170 - 80 * Math.sin(Math.PI * t) * 0.95 + 8 * Math.sin(Math.PI * t);
+    const ang = (t - .5) * 1.5;                   // abre em leque
+    const len = 55 + 40 * Math.sin(Math.PI * t);
+    const x2 = x + Math.sin(ang) * len * 1.3;
+    const y2 = y + Math.cos(ang) * len * .9 + 10;
+    const cx = x + Math.sin(ang) * len * .3 + (t < .5 ? -12 : 12);
+    out += `<path class="lash" style="animation-delay:${(i*.07).toFixed(2)}s" d="M${x.toFixed(1)} ${y.toFixed(1)} Q${cx.toFixed(1)} ${(y+len*.7).toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}"/>`;
+  }
+  g.innerHTML = out;
+})();
+
+/* ===== Cards de serviço + filtro por categoria ===== */
+const grid = document.getElementById('grid');
+const chips = document.getElementById('chips');
+const select = document.getElementById('f-servico');
+
+grid.innerHTML = CONFIG.services.map(s => `
+  <article class="card" data-cat="${s.cat}">
+    <span class="tag">${s.cat}</span>
+    <h3>${s.name}</h3>
+    <p>${s.desc}</p>
+    <a class="btn btn-primary" data-wa="Olá, Ingrid! Quero agendar: ${s.name}.">Agendar este serviço</a>
+  </article>`).join('');
+
+select.innerHTML = CONFIG.services.map(s => `<option>${s.name}</option>`).join('');
+
+const cats = ['Todos', ...new Set(CONFIG.services.map(s => s.cat))];
+chips.innerHTML = cats.map((c, i) => `<button class="chip" type="button" aria-pressed="${i === 0}" data-cat="${c}">${c}</button>`).join('');
+
+chips.addEventListener('click', e => {
+  const btn = e.target.closest('.chip'); if(!btn) return;
+  chips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c === btn));
+  grid.querySelectorAll('.card').forEach(card => {
+    card.hidden = !(btn.dataset.cat === 'Todos' || card.dataset.cat === btn.dataset.cat);
+  });
+});
+
+/* ===== Formulário que monta a mensagem ===== */
+document.getElementById('composer').addEventListener('submit', e => {
+  e.preventDefault();
+  const nome = document.getElementById('f-nome').value.trim();
+  const serv = select.value;
+  const dia  = document.getElementById('f-dia').value;
+  const msg = `Olá, Ingrid! ${nome ? 'Meu nome é ' + nome + '. ' : ''}Quero agendar: ${serv}. Melhor dia: ${dia}.`;
+  window.open(waLink(msg), '_blank', 'noopener');
+});
+
+bindWa();
+</script>
+</body>
+</html>
